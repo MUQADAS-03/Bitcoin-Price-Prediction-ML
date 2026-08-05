@@ -42,7 +42,9 @@ This project applies **supervised machine learning** to predict whether Bitcoin'
 
 ```
 
-<img width="1356" height="1238" alt="image" src="https://github.com/user-attachments/assets/2e9e7c1c-e7f7-43a6-af8e-6ed4a928702c" />
+## Architecture
+
+![Architecture Diagram](https://github.com/user-attachments/assets/2e9e7c1c-e7f7-43a6-af8e-6ed4a928702c)
 
 ```
 
