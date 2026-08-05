@@ -41,13 +41,38 @@ This project applies **supervised machine learning** to predict whether Bitcoin'
 ##  Project Workflow
 
 ```
-
-## Architecture
-
-![Architecture Diagram](https://github.com/user-attachments/assets/2e9e7c1c-e7f7-43a6-af8e-6ed4a928702c)
+Raw Bitcoin CSV
+      │
+      ▼
+1. Exploratory Data Analysis (EDA)
+   ├── Price trend line chart
+   ├── Distribution plots (Open, High, Low, Close)
+   └── Box plots for outlier detection
+      │
+      ▼
+2. Feature Engineering
+   ├── Extract year, month, day from Date
+   ├── open-close  = Open - Close
+   ├── low-high    = Low - High
+   ├── is_quarter_end = 1 if month % 3 == 0
+   └── target = 1 if next day's Close > today's Close
+      │
+      ▼
+3. Correlation Analysis
+   └── Heatmap (threshold > 0.9) to remove multicollinearity
+      │
+      ▼
+4. Model Training (70/30 Train-Test Split)
+   ├── Logistic Regression
+   ├── SVM (Polynomial Kernel)
+   └── XGBoost Classifier
+      │
+      ▼
+5. Evaluation
+   ├── ROC-AUC Score (Training + Validation)
+   └── Confusion Matrix (Logistic Regression)
 
 ```
-
 
 ##  Feature Engineering
 
